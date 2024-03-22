@@ -1,0 +1,27 @@
+{
+    "jsc": {
+        "target": "es5", // Output specification for JavaScript
+        "parser": {
+            "syntax": "typescript",
+            "tsx": true,
+            "decorators": false,
+            "dynamicImport": true
+        },
+        "minify": {} // Configuration for minification, needs to be enabled first
+    },
+    "env": {
+        "targets": {
+            "ie": "11" // Only compatible with IE 11
+        },
+        "corejs": "3" // Version of corejs
+    },
+    "module": {
+        "type": "commonjs",
+        "strict": false,
+        "strictMode": true,
+        "lazy": false,
+        "noInterop": false
+    },
+    "sourceMaps": true,
+    "minify": true // Whether to enable minification
+}

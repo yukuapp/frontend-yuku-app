@@ -1,0 +1,29 @@
+.menu-drawer {
+    .ant-drawer-wrapper-body {
+        color: white;
+        background: linear-gradient(180deg, #1c253b 0%, #131827 100%);
+        box-shadow: 10px 40px 60px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.my-world-tooltip {
+    .ant-tooltip-arrow {
+        --antd-arrow-background-color: #191e2e;
+    }
+    .ant-tooltip-arrow {
+        width: 31px;
+        height: 10px;
+        right: 30px;
+        background-image: url('/img/space/arrow-tooltip.svg');
+        background-repeat: no-repeat;
+    }
+    .ant-tooltip-arrow::before {
+        display: none !important;
+    }
+    .ant-tooltip-arrow::after {
+        display: none !important;
+    }
+    .ant-tooltip-content {
+        right: -20px !important;
+    }
+}

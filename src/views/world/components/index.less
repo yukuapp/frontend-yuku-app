@@ -1,0 +1,107 @@
+@keyframes backgroundPan {
+    0% {
+        background-position: -20% -20%;
+    }
+
+    25% {
+        background-position: 30% 80%;
+    }
+
+    50% {
+        background-position: 110% 110%;
+    }
+
+    75% {
+        background-position: 80% 30%;
+    }
+
+    to {
+        background-position: -20% -20%;
+    }
+}
+.animateBtn {
+    background: radial-gradient(
+        #9f23eb 0%,
+        #9f23eb 10%,
+        #7346ee 40%,
+        #5252eb 60%,
+        #3a6ced 70%,
+        #0a91f3 100%
+    );
+    animation: backgroundPan 8s linear infinite;
+    background-size: 180% 240%;
+    will-change: background-position;
+}
+.max-space-tooltip {
+    .ant-tooltip-content {
+        right: 25px !important;
+    }
+    .ant-tooltip-arrow {
+        --antd-arrow-background-color: #191e2e;
+    }
+}
+
+@keyframes bounce-in {
+    0%,
+    70%,
+    80%,
+    100% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+    85% {
+        transform: translateX(-5px);
+    }
+}
+
+.animateArrow {
+    animation: bounce-in 5s infinite;
+}
+
+.setting {
+    .ant-form-item {
+        margin-bottom: 20px;
+    }
+
+    .ant-upload {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        border: none !important;
+        overflow: hidden;
+    }
+
+    .ant-picker {
+        .ant-picker-input > input {
+            color: #fff;
+        }
+        .ant-picker-input > input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .ant-picker-suffix {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .ant-picker-clear {
+            color: rgba(255, 255, 255, 0.7);
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    .ant-form-item .ant-form-item-control-input .ant-form-item-control-input-content .ant-input {
+        border: none !important;
+        height: 40px !important;
+    }
+}
+
+.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner {
+    background-color: #1668dc !important;
+}
+
+.ant-picker-ok .ant-btn {
+    background-color: #1668dc;
+}

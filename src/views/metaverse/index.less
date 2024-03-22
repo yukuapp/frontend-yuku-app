@@ -1,0 +1,237 @@
+.architecture-wrap-head {
+    background: #000;
+    width: 100%;
+    position: relative;
+
+    .swiper-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(88.49deg, #101522 17.67%, rgba(16, 21, 34, 0) 98.86%);
+        z-index: 10;
+        top: 0;
+        left: 0;
+    }
+    .architecture-wrap-head-img {
+        display: flex;
+        width: 100%;
+        height: 640px;
+        object-fit: cover;
+        align-items: center;
+        justify-content: center;
+    }
+    .architecture-swiper {
+        position: absolute;
+        width: 1280px;
+        height: 220px;
+        left: 50%;
+        bottom: -15%;
+        transform: translate(-50%);
+        z-index: 10;
+        // border: 1px solid red;
+        .architecture-swiper-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+            height: max-content;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+            .architecture-swiper-header-name {
+                color: #fff;
+                font-family: 'Inter-Bold';
+                font-size: 40px;
+                line-height: 40px;
+            }
+            .architecture-swiper-box {
+                display: flex;
+                justify-content: space-between;
+                width: 96px;
+                height: 36px;
+
+                .swiper-common-change {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .architecture-swiper-header-box-left {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 8px;
+                    background: linear-gradient(225deg, #184efb 0%, #1ef2ff 100%);
+                    cursor: pointer;
+                }
+                .architecture-swiper-header-box-right {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 8px;
+                    background: linear-gradient(225deg, #184efb 0%, #1ef2ff 100%);
+                    cursor: pointer;
+                }
+
+                .disabled {
+                    background: #191e2e;
+                    cursor: not-allowed;
+                }
+            }
+        }
+        .architecture-swiper-wrap {
+            display: flex;
+            .architecture-swiper-box {
+                position: relative;
+                margin-right: 16px;
+                margin-top: 20px;
+                .architecture-swiper-img {
+                    display: flex;
+                    width: 200px;
+                    height: 128px;
+                    object-fit: cover;
+                    cursor: pointer;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .architecture-swiper-name {
+                    width: 100%;
+                    text-align: center;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%);
+                    bottom: 12px;
+                    color: #e5f0ff;
+                    text-align: center;
+                    text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.25);
+                    font-family: 'Inter-Bold';
+                    font-size: 20px;
+                    line-height: 20px;
+                    text-transform: capitalize;
+                }
+            }
+
+            .architecture-swiper-box:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.banner-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: linear-gradient(85.66deg, #101522 15%, rgba(16, 21, 34, 0) 100%),
+        linear-gradient(180deg, #101522 0%, rgba(16, 21, 34, 0) 50%);
+}
+
+.ques-animation {
+    background: rgba(32, 42, 67, 1);
+    max-height: 76px;
+    overflow: hidden;
+    transition: max-height 0.5s linear;
+
+    p:last-child {
+        // display: none;
+        opacity: 0;
+        transition: all 0.2s linear;
+    }
+}
+
+.ques-animation:hover {
+    background: linear-gradient(89.18deg, #9f23eb 0%, #0a91f3 100%);
+    max-height: 200px;
+    transition: max-height 0.5s linear;
+
+    p:last-child {
+        opacity: 1;
+        transition: all 0.5s linear;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35;
+    }
+
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124;
+    }
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    // background: #26364D;
+}
+
+.loading {
+    width: 50px;
+    height: 50px;
+    animation: rotate 3s linear infinite;
+}
+
+.circle {
+    fill: none;
+    stroke: #405a80;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 1, 200;
+    animation: dash 3s ease-in-out infinite;
+}
+
+.swiper-common-change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.architecture-swiper-header-box-left {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(225deg, #184efb 0%, #1ef2ff 100%);
+    cursor: pointer;
+}
+.architecture-swiper-header-box-right {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(225deg, #184efb 0%, #1ef2ff 100%);
+    cursor: pointer;
+}
+
+.disabled {
+    background: #191e2e;
+    cursor: not-allowed;
+}
+
+.swiper-progress-bar {
+    width: 100%;
+    margin-top: 20px;
+
+    .ant-progress-bg {
+        height: 2px !important;
+    }
+}
